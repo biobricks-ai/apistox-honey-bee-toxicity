@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/csvw",
+    {
+      "schema": "https://schema.org/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dcterms": "http://purl.org/dc/terms/",
+      "prov": "http://www.w3.org/ns/prov#"
+    }
+  ],
+  "@type": "schema:Dataset",
+  "schema:name": "apistox-honey-bee-toxicity",
+  "schema:description": "ApisTox is a comprehensive benchmark dataset for honey bee (Apis mellifera) toxicity prediction. It consolidates 21,372 bioassays for 1,189 unique molecules, including pesticides (herbicides, fungicides, insecticides) and other agrochemicals. The dataset includes chemical structures (SMILES), CAS numbers, and toxicity endpoints. Data sources include EPA ECOTOX and the Pesticide Properties DataBase (PPDB). The 'label' column indicates toxicity classification, and 'toxicity_type' distinguishes between Contact and other exposure routes.",
+  "schema:keywords": ["toxicology", "pesticides", "honey bee", "apis mellifera", "ecotox", "qsar", "environmental safety"],
+  "dcterms:license": "https://creativecommons.org/licenses/by/4.0/",
+  "schema:dateCreated": "2026-01-29",
+  "schema:version": "1.0.0",
+  "schema:creator": {"@type": "schema:Organization", "schema:name": "BioBricks.ai"},
+  "dcat:distribution": [{
+    "@type": "dcat:Distribution",
+    "dcat:downloadURL": "brick/data.parquet",
+    "dcat:mediaType": "application/x-parquet"
+  }]
+}

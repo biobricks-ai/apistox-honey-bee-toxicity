@@ -1,0 +1,93 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "tables": [{
+    "url": "brick/data.parquet",
+    "tableSchema": {
+      "columns": [
+        {
+          "name": "name",
+          "titles": "Chemical Name",
+          "dc:description": "Common name of the chemical",
+          "datatype": "string"
+        },
+        {
+          "name": "CID",
+          "titles": "PubChem CID",
+          "dc:description": "PubChem Compound Identifier",
+          "datatype": "integer",
+          "propertyUrl": "http://semanticscience.org/resource/CHEMINF_000140"
+        },
+        {
+          "name": "CAS",
+          "titles": "CAS Registry Number",
+          "dc:description": "Chemical Abstracts Service Registry Number",
+          "datatype": "string",
+          "propertyUrl": "http://semanticscience.org/resource/CHEMINF_000446"
+        },
+        {
+          "name": "SMILES",
+          "titles": "SMILES",
+          "dc:description": "Simplified Molecular Input Line Entry System string",
+          "datatype": "string",
+          "propertyUrl": "http://semanticscience.org/resource/CHEMINF_000018"
+        },
+        {
+          "name": "source",
+          "titles": "Data Source",
+          "dc:description": "Source of the data point (e.g., ECOTOX, PPDB)",
+          "datatype": "string"
+        },
+        {
+          "name": "year",
+          "titles": "Year",
+          "dc:description": "Year of the study or record",
+          "datatype": "integer"
+        },
+        {
+          "name": "toxicity_type",
+          "titles": "Toxicity Type",
+          "dc:description": "Type of toxicity assay (e.g., Contact, Oral)",
+          "datatype": "string"
+        },
+        {
+          "name": "herbicide",
+          "titles": "Is Herbicide",
+          "dc:description": "Flag indicating if the chemical is a herbicide (1=yes, 0=no)",
+          "datatype": "integer"
+        },
+        {
+          "name": "fungicide",
+          "titles": "Is Fungicide",
+          "dc:description": "Flag indicating if the chemical is a fungicide (1=yes, 0=no)",
+          "datatype": "integer"
+        },
+        {
+          "name": "insecticide",
+          "titles": "Is Insecticide",
+          "dc:description": "Flag indicating if the chemical is an insecticide (1=yes, 0=no)",
+          "datatype": "integer"
+        },
+        {
+          "name": "other_agrochemical",
+          "titles": "Is Other Agrochemical",
+          "dc:description": "Flag indicating if the chemical is another type of agrochemical (1=yes, 0=no)",
+          "datatype": "integer"
+        },
+        {
+          "name": "label",
+          "titles": "Toxicity Label",
+          "dc:description": "Toxicity classification label",
+          "datatype": "integer"
+        },
+        {
+          "name": "ppdb_level",
+          "titles": "PPDB Level",
+          "dc:description": "Pesticide Properties DataBase level or classification",
+          "datatype": "integer"
+        }
+      ],
+      "aboutUrl": "http://biobricks.ai/brick/apistox-honey-bee-toxicity/row/{_row}"
+    }
+  }],
+  "dc:conformsTo": "http://www.w3.org/ns/csvw"
+}
